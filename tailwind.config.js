@@ -22,6 +22,11 @@ module.exports = {
         // ...
         900: '#1a202c',
       },
+      main: {
+        100: '#a274a8',
+        default: '#712a7a',
+        700: '#5a2161',
+      },
     },
     spacing: {
       // https://sportality.atlassian.net/wiki/spaces/PDEV/pages/1160773647/Spacing+and+Grid -> recommended spacing spec
