@@ -5,9 +5,11 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "@vue/runtime-core";
+import { defineComponent } from "vue";
+import Comparer from '@/components/Comparer.vue';
 
 export default defineComponent({
+    components: { Comparer },
     name: "Stats",
     props: {
         recaps: String,

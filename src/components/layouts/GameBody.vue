@@ -5,12 +5,11 @@
 </template>
 
 <script lang='ts'>
-import Comparer from '@/components/Comparer.vue';
 import { defineComponent, computed } from 'vue';
 import Stats from '../Stats.vue';
 
 export default defineComponent({
-  components: { Comparer, Stats },
+  components: { Stats },
   name: 'GameBody',
   props: {
     recaps: String,
