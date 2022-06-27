@@ -1,6 +1,7 @@
 <template>
-  <div class="gameHeader">
+  <div class="flex justify-between mx-auto gameHeader">
     <img :src="homeTeamLogo" />
+    <p class="flex items-center text-lg font-bold">VS</p>
     <img :src="awayTeamLogo" />
   </div>
 </template>
@@ -27,4 +28,7 @@ export default defineComponent({
 </script>
 
 <style scoped>
+  .gameHeader {
+    max-width: 425px;
+  }
 </style>
