@@ -1,5 +1,5 @@
 <template>
-  <div class="container p-4 mx-auto font-sans lg:p-6">
+  <div class="container p-4 mx-auto font-sans lg:p-6 text-main">
     <game-header :homeTeam="homeTeamId" :awayTeam="awayTeamId" />
     <game-body :homeTeam="homeTeamId" :awayTeam="awayTeamId" :recaps="recapsData" :playersByTeam="playersByTeamData" />
   </div>
