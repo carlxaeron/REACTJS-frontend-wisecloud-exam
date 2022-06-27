@@ -10,7 +10,7 @@
         </div>
     </div>
     <div class="pl-4 comparerRight">{{rightText}}</div>
-    <div class="w-full text-center comparerTitle">{{title}}123</div>
+    <div class="w-full text-center text-black comparerTitle">{{title}}</div>
   </div>
 </template>
 

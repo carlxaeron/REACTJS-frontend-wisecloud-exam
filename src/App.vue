@@ -8,8 +8,8 @@
 <script lang='ts'>
 import { defineComponent, computed } from 'vue';
 import {playersByTeam, recaps} from './games';
-import GameHeader from '@/components/games/GameHeader.vue';
-import GameBody from '@/components/games/GameBody.vue';
+import GameHeader from '@/components/layouts/GameHeader.vue';
+import GameBody from '@/components/layouts/GameBody.vue';
 
 export default defineComponent({
   name: 'GameCenter',

@@ -1,8 +1,8 @@
 <template>
   <div class="pt-6 gameBody">
-    <comparer title="Posession" leftText="1" rightText="2" :leftPercent="33" :rightPercent="55"/>
-    <comparer title="Posession" leftText="1" rightText="2" :leftPercent="33" :rightPercent="55"/>
-    <comparer title="Posession" leftText="1" rightText="2" :leftPercent="33" :rightPercent="55"/>
+    <comparer title="Possession" leftText="1" rightText="2" :leftPercent="33" :rightPercent="55"/>
+    <comparer title="Possession" leftText="1" rightText="2" :leftPercent="33" :rightPercent="55"/>
+    <comparer title="Possession" leftText="1" rightText="2" :leftPercent="33" :rightPercent="55"/>
   </div>
 </template>
 

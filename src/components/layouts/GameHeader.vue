@@ -1,7 +1,7 @@
 <template>
   <div class="flex justify-between mx-auto gameHeader">
     <img :src="homeTeamLogo" />
-    <p class="flex items-center text-lg font-bold">VS</p>
+    <p class="flex items-center text-lg font-bold text-black">VS</p>
     <img :src="awayTeamLogo" />
   </div>
 </template>
