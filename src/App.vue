@@ -1,7 +1,7 @@
 <template>
   <div class="container p-4 mx-auto font-sans lg:p-6 text-main">
     <game-header :homeTeam="homeTeamId" :awayTeam="awayTeamId" />
-    <game-body :homeTeam="homeTeamId" :awayTeam="awayTeamId" :recaps="recapsData" :playersByTeam="playersByTeamData" />
+    <game-body :homeTeam="homeTeamId" :awayTeam="awayTeamId" :statsData="statsData" />
   </div>
 </template>
 
@@ -25,12 +25,12 @@ export default defineComponent({
     const homeTeamId = computed(() => recaps?.gameRecap?.homeTeamId);
     const recapsData = recaps;
     const playersByTeamData = playersByTeam;
+    const statsData = { recaps: recapsData, playersByTeam: playersByTeamData };
 
     return {
       homeTeamId,
       awayTeamId,
-      recapsData,
-      playersByTeamData,
+      statsData,
     };
   },
 });

@@ -1,19 +1,22 @@
 <template>
   <div class="pt-6 gameBody">
-    <stats :recaps="recaps" :playersByTeam="playersByTeam" />
+    <stats :statsData="statsData" />
   </div>
 </template>
 
 <script lang='ts'>
-import { defineComponent, computed } from 'vue';
+import GameStatsInterface from '@/interfaces/GameStatsInterface';
+import { defineComponent, computed, PropType } from 'vue';
 import Stats from '../Stats.vue';
 
 export default defineComponent({
   components: { Stats },
   name: 'GameBody',
   props: {
-    recaps: String,
-    playersByTeam: String,
+    statsData: {
+      type: Object as PropType<GameStatsInterface>,
+      required: true,
+    },
   },
   setup(props) {
 

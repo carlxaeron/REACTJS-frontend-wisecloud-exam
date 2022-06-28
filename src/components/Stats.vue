@@ -5,18 +5,21 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, PropType } from "vue";
 import Comparer from '@/components/Comparer.vue';
+import GameStatsInterface from "@/interfaces/GameStatsInterface";
 
 export default defineComponent({
     components: { Comparer },
     name: "Stats",
     props: {
-        recaps: String,
-        playersByTeam: String,
+        statsData: {
+            type: Object as PropType<GameStatsInterface>,
+            required: true,
+        },
     },
     setup(props) {
-
+        console.log(props.statsData);
     }
 })
 </script>
