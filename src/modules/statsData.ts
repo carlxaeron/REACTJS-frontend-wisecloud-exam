@@ -25,18 +25,72 @@ export default {
             }
         }
 
-        // shots
-        var _key = 'SOG'
-        const shots = { ...computeData(_key), title: 'Shots' }
+        // // shots
+        // var _key = 'SOG'
+        // const shots = { ...computeData(_key), title: 'Shots' }
 
-        // G
         var _key = 'G'
         const G = { ...computeData(_key), title: 'G' }
+
+        var _key = 'PIM'
+        const PIM = { ...computeData(_key), title: _key }
+        
+        var _key = 'SOG'
+        const SOG = { ...computeData(_key), title: _key }
+        
+        var _key = 'SPG'
+        const SPG = { ...computeData(_key), title: _key }
+        
+        var _key = 'Saves'
+        const Saves = { ...computeData(_key), title: _key }
+        
+        var _key = 'GA'
+        const GA = { ...computeData(_key), title: _key }
+        
+        var _key = 'SavesPerShot'
+        const SavesPerShot = { ...computeData(_key), title: _key }
+        
+        var _key = 'PPG'
+        const PPG = { ...computeData(_key), title: _key }
+        
+        var _key = 'SHG'
+        const SHG = { ...computeData(_key), title: _key }
+        
+        var _key = 'PPGA'
+        const PPGA = { ...computeData(_key), title: _key }
+        
+        var _key = 'SHGA'
+        const SHGA = { ...computeData(_key), title: _key }
+        
+        var _key = 'NumPP'
+        const NumPP = { ...computeData(_key), title: _key }
+        
+        var _key = 'NumSH'
+        const NumSH = { ...computeData(_key), title: _key }
+        
+        var _key = 'Hits'
+        const Hits = { ...computeData(_key), title: _key }
+        
+        var _key = 'PPSOG'
+        const PPSOG = { ...computeData(_key), title: _key }
         
         return {
             data: {
-                shots,
                 G,
+                PIM,
+                SOG,
+                SPG,
+                Saves,
+                GA,
+                SavesPerShot,
+                PPG,
+                SHG,
+                PPGA,
+                SHGA,
+                NumPP,
+                NumSH,
+                Hits,
+                PPSOG,
             }
         }
     },

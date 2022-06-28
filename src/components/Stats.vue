@@ -4,8 +4,7 @@
             <template v-for="(_d,k) in _statsData" :key="k">
                 <comparer :combinedData="_d"/>
             </template>
-            <comparer title="Possession" leftText="1" rightText="2" :leftPercent="33" :rightPercent="55"/>
-            <comparer title="Possession" leftText="1" rightText="2" :leftPercent="33" :rightPercent="55"/>
+            <!-- <comparer title="Possession" leftText="1" rightText="2" :leftPercent="33" :rightPercent="55"/> -->
         </template>
     </stats-data>
 </template>
