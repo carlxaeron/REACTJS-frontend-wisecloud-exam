@@ -3,10 +3,10 @@
     <div class="pr-4 text-right comparerLeft">{{result.leftText}}</div>
     <div class="flex comparerP">
         <div class="comparerPLeft">
-            <div class="ml-auto bg-main-100" :style="{width: result.leftPercent+'%'}"></div>
+            <div class="ml-auto duration-1000 ease-in bg-main-100" :style="{width: lefts+'%'}"></div>
         </div>
         <div class="comparerPRight">
-            <div class="bg-main-700" :style="{width: result.rightPercent+'%'}"></div>
+            <div class="duration-1000 ease-in bg-main-700" :style="{width: rights+'%'}"></div>
         </div>
     </div>
     <div class="pl-4 comparerRight">{{result.rightText}}</div>
@@ -15,7 +15,7 @@
 </template>
 
 <script lang='ts'>
-import { defineComponent, computed } from 'vue';
+import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'Comparer',
@@ -26,6 +26,15 @@ export default defineComponent({
     rightPercent: Number,
     title: String,
     combinedData: Object,
+  },
+  data() {
+    return { rights: 0, lefts: 0 }
+  },
+  created() {
+    setTimeout(() => {
+      this.rights = this.result.rightPercent as number
+      this.lefts = this.result.leftPercent as number
+    }, 300)
   },
   setup(props) {
     let result = {
@@ -53,8 +62,9 @@ export default defineComponent({
       }
     }
 
+
     return {
-      result
+      result,
     };
   },
 });
