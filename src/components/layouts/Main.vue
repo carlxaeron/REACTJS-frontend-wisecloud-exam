@@ -1,5 +1,10 @@
 <template>
-  <div class="container p-4 mx-auto font-sans lg:p-6 text-main">
+  <div class="container relative p-4 mx-auto font-sans lg:p-6 text-main">
+    <nav class="absolute right-0 mr-5 text-xl font-bold lg:mr-32 nav">
+      <ul>
+        <li>Total <i class="fa fa-list-alt" aria-hidden="true"></i></li>
+      </ul>
+    </nav>
     <game-header :homeTeam="homeTeamId" :awayTeam="awayTeamId" />
     <game-body :homeTeam="homeTeamId" :awayTeam="awayTeamId" :statsData="statsData" />
   </div>
