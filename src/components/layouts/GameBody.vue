@@ -6,7 +6,7 @@
 
 <script lang='ts'>
 import GameStatsInterface from '@/interfaces/GameStatsInterface';
-import { defineComponent, computed, PropType } from 'vue';
+import { defineComponent, PropType } from 'vue';
 import Stats from '../Stats.vue';
 
 export default defineComponent({
