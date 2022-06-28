@@ -67,9 +67,12 @@ export default defineComponent({
     margin-top: 3.2rem
 
     .comparerLeft, .comparerRight 
-      min-width: 12.5%
+      width: 12.5%
       font-size: 2rem
       font-weight: bold
+      text-overflow: ellipsis
+      white-space: nowrap
+      overflow: hidden
       
     .comparerP 
       min-width: 75%
