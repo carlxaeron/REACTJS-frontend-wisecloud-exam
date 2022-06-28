@@ -1,9 +1,9 @@
 <template>
     <stats-data :statsData="statsData">
-        <template v-slot:default="{
-            SOG
-        }">
-            <comparer :combinedData="SOG"/>
+        <template v-slot:default="_statsData">
+            <template v-for="(_d,k) in _statsData" :key="k">
+                <comparer :combinedData="_d"/>
+            </template>
             <comparer title="Possession" leftText="1" rightText="2" :leftPercent="33" :rightPercent="55"/>
             <comparer title="Possession" leftText="1" rightText="2" :leftPercent="33" :rightPercent="55"/>
         </template>
