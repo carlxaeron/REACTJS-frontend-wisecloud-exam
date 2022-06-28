@@ -13,7 +13,7 @@ export default {
 
         // compute data here
         const computeData = (_key) => {
-            return {
+            let returns = {
                 home: {
                     text: GR['home' + _key],
                     perc: (GR['home' + _key] / (GR['home' + _key] + GR['away' + _key]) * 100),
@@ -23,6 +23,11 @@ export default {
                     perc: (GR['away' + _key] / (GR['home' + _key] + GR['away' + _key]) * 100),
                 },
             }
+
+            returns.home.perc = returns.home.perc ? returns.home.perc : 0
+            returns.away.perc = returns.away.perc ? returns.away.perc : 0
+
+            return returns
         }
 
         // // shots
