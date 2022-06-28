@@ -2,7 +2,10 @@
   <div class="container relative p-4 mx-auto font-sans lg:p-6 text-main">
     <nav class="absolute right-0 mr-5 text-xl font-bold lg:mr-32 nav">
       <ul>
-        <li>Total <i class="fa fa-list-alt" aria-hidden="true"></i></li>
+        <li class="flex items-center justify-center" @click="toggleMenu">Total <font-awesome-icon class="ml-1 text-sm" icon="caret-down" /></li>
+        <ul :class="!showMenu && 'hidden'">
+          <li><a>Link</a></li>
+        </ul>
       </ul>
     </nav>
     <game-header :homeTeam="homeTeamId" :awayTeam="awayTeamId" />
@@ -22,6 +25,14 @@ export default defineComponent({
   components: {
     GameHeader,
     GameBody,
+  },
+  data() {
+    return { showMenu: false }
+  },
+  methods: {
+    toggleMenu() {
+      this.showMenu = !this.showMenu
+    }
   },
   async setup() {
     const gameIsaId = 12771;
@@ -50,5 +61,8 @@ export default defineComponent({
 });
 </script>
 
-<style>
+<style scoped lang="sass">
+  nav
+    li
+      cursor: pointer
 </style>
